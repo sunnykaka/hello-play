@@ -1,0 +1,22 @@
+# Routes
+# This file defines all application routes (Higher priority routes first)
+# ~~~~
+
+# Home page
+GET        /                    controllers.Application.index
+
+# Map static resources from the /public folder to the /assets URL path
+GET        /assets/*file        controllers.Assets.at(path="/public", file)
+
+GET        /hello               controllers.Application.hello(id: Option[Long])
+
+GET        /welcome             controllers.Application.welcome(name ?= "Anonymous")
+GET        /redirect_to         controllers.Application.redirect_to(name ?= "Anonymous1")
+
+
+
+GET        /logger_info         controllers.Application.loggerInfo(name ?= "Anonymous")
+
+
+
+    
